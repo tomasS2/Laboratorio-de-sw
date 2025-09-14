@@ -18,7 +18,7 @@ public class Rectangulo extends FiguraGeometrica {
     }
 
     @Override
-    public int area() {
+    public Integer area() {
         return this.alto * this.ancho;
     }
 }

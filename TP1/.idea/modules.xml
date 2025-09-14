@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TP1.iml" filepath="$PROJECT_DIR$/TP1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ejer5/ejer5.iml" filepath="$PROJECT_DIR$/ejer5/ejer5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Laboratorio de sw prácticas.iml" filepath="$PROJECT_DIR$/Laboratorio de sw prácticas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/Practica1/ejer5/ejer5.iml" filepath="$PROJECT_DIR$/src/Practica1/ejer5/ejer5.iml" />
     </modules>
   </component>
 </project>

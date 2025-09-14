@@ -1,4 +1,6 @@
-public class VacunaPatogenoIntegro extends Vacuna{
+package Practica1;
+
+public class VacunaPatogenoIntegro extends Vacuna {
     private String virusPatogeno;
 
 
@@ -17,7 +19,7 @@ public class VacunaPatogenoIntegro extends Vacuna{
 
     @Override
     public String toString() {
-        return "VacunaPatogenoIntegro{" +
+        return "Practica1.VacunaPatogenoIntegro{" +
                 "virusPatogeno='" + virusPatogeno + '\'' +
                 "} " + super.toString();
     }

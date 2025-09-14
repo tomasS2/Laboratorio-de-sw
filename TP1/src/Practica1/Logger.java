@@ -1,3 +1,5 @@
+package Practica1;
+
 public class Logger {
 
     private static Logger instance;

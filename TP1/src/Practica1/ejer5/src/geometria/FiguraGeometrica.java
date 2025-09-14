@@ -1,14 +1,22 @@
 package geometria;
 
-public abstract class FiguraGeometrica {
+import java.io.Serializable;
+
+
+//ejercicio 4 pr2:
+//a_
+
+public abstract class FiguraGeometrica implements Serializable {
     private String color;
+
+    private static final long serialVersionUID = 1L;
 
     public FiguraGeometrica() {
     }
 
     public abstract void dibujar();
 
-    public abstract int  area();
+    public abstract Integer  area();
 
     public void setColor(String color){
         this.color = color;

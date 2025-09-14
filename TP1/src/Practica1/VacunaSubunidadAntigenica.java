@@ -1,4 +1,6 @@
-public class VacunaSubunidadAntigenica extends Vacuna{
+package Practica1;
+
+public class VacunaSubunidadAntigenica extends Vacuna {
     private int cantidadAntigenos;
     private String tipoProceso;
 
@@ -26,7 +28,7 @@ public class VacunaSubunidadAntigenica extends Vacuna{
 
     @Override
     public String toString() {
-        return "VacunaSubunidadAntigenica{" +
+        return "Practica1.VacunaSubunidadAntigenica{" +
                 "cantidadAntigenos=" + cantidadAntigenos +
                 ", tipoProceso='" + tipoProceso + '\'' +
                 "} " + super.toString();

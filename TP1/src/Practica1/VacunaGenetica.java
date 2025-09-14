@@ -1,4 +1,6 @@
-public class VacunaGenetica extends Vacuna{
+package Practica1;
+
+public class VacunaGenetica extends Vacuna {
     private String temperaturaMinima;
     private String temperaturaMaxima;
 
@@ -26,7 +28,7 @@ public class VacunaGenetica extends Vacuna{
 
     @Override
     public String toString() {
-        return "VacunaGenetica{" +
+        return "Practica1.VacunaGenetica{" +
                 "temperaturaMinima='" + temperaturaMinima + '\'' +
                 ", temperaturaMaxima='" + temperaturaMaxima + '\'' +
                 "} " + super.toString();
