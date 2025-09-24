@@ -1,7 +1,9 @@
 package Practica2.ejer3;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 
 //punto a) no tiene el funcionamiento adecuado porque al hacer addall() en HashSetAgregados se suman todos los elementos
@@ -34,6 +36,12 @@ public class Main {
         lista2.add("chau");
         lista2.add("saludos");
         lista2.add("buenas");
+
+
+        //otra cosa (trabajando directametne con set. Para el enunciado no sería lo mismo porque me interesa conocer los removidos y por lo tanto necesito implementar funcionalidad extra)
+//        Set s = new HashSet(lista2);
+//        s.size();
+//        s.iterator().forEachRemaining(System.out::println);
 
         //OtroSet h2 = new HashSetAgregados2<>(); // al hacerlo así no se tiene acceso a los métodos propios de HashSetAgregados2
         HashSetAgregados2<Object> h2 = new HashSetAgregados2<>();

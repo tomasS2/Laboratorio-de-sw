@@ -6,7 +6,7 @@ import java.util.HashSet;
 public class HashSetAgregados2<E> extends OtroSet {
     private int cantidadAgregados = 0;
     public HashSetAgregados2() {
-        super(new HashSet<>());
+        super(new HashSet<>()); //le paso una clase concreta
     }
 
     @Override
