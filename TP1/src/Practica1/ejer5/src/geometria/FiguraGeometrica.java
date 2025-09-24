@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 
 //ejercicio 4 pr2:
-//a_
+//a_dsp hacer
 
 public abstract class FiguraGeometrica implements Serializable {
     private String color;

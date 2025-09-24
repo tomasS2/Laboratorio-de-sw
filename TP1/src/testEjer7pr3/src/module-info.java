@@ -1,0 +1,3 @@
+module testLogging {
+    requires loggingutils;
+}

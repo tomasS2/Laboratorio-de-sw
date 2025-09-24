@@ -28,7 +28,7 @@ public class Main {
 //---------------------------------------------------------------
         //b y c
 
-        List<String> lista2 = new ArrayList<String>();
+        List<String> lista2 = new ArrayList<>();
 
         lista2.add("hola");
         lista2.add("chau");

@@ -1,9 +1,14 @@
 import geometria.Circulo;
+import geometria.FiguraGeometrica;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.Arrays;
 
 public class PaintTest {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Paint paint = new Paint();
 
         paint.init();
@@ -27,8 +32,12 @@ public class PaintTest {
         System.out.println(Arrays.toString(paint.getPaletas()));
 
 
-        //ejer 3 pr 2
+        //ejer 3 pr 2 (falta completar algo para entenderlo bien)
 
-
+        Circulo c = new Circulo();
+        FileOutputStream fileOutputStream = new FileOutputStream("archivoprueba.txt");
+        ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+        objectOutputStream.writeObject(c);
+        objectOutputStream.close();
     }
 }

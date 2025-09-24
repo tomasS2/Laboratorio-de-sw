@@ -1,0 +1,5 @@
+package resParcial1;
+
+public enum Genero {
+    ACCION, CIENCIA_FICCION, COMEDIA, DRAMA, FANTASIA, MUSICAL, ROMANCE, SUSPENSO
+}
