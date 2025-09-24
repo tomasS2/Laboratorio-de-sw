@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class Buscador {
     private List<Pelicula> peliculas;
-    public static final Buscador instance = new Buscador();
+    private static Buscador instance;
 
 
     public static final Comparator<Pelicula> comparadorTitulo = new Comparator<Pelicula>() {
