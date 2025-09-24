@@ -35,11 +35,12 @@ public class Main {
         lista2.add("saludos");
         lista2.add("buenas");
 
-
-        OtroSet h2 = new HashSetAgregados2<>();
+        //OtroSet h2 = new HashSetAgregados2<>(); // al hacerlo así no se tiene acceso a los métodos propios de HashSetAgregados2
+        HashSetAgregados2<Object> h2 = new HashSetAgregados2<>();
         h2.addAll(lista2);
         h2.remove(lista2.get(0));
         h2.remove(lista2.get(1));
+        System.out.println(h2.getCantidadAgregados());
         System.out.println(h2.getRemovidos());
     }
 }

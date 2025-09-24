@@ -9,7 +9,11 @@ public class HashSetAgregados2<E> extends OtroSet {
         super(new HashSet<>());
     }
 
-
+    @Override
+    public boolean addAll(Collection c) {
+        this.cantidadAgregados += c.size();
+        return super.addAll(c);
+    }
     public int getCantidadAgregados() {
         return cantidadAgregados;
     }
