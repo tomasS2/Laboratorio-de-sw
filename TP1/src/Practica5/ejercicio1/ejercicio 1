@@ -1,0 +1,5 @@
+1)
+b) sí, el resultado de la ejecución es el mismo. Lo único es que aparece un warning porque no se suprime la advertencia del 'deprecated'
+c) La diferencia radica en que si se realiza en un método, la anotación se aplica a nivel método justamente para que el framework o las herramientas,
+que son los que las utilizan, sepan que lógica aplicar según la anotación indique.
+Las anotaciones en las clases se aplican a nivel clase (misma explicación que antes).
