@@ -78,21 +78,57 @@ fun main(args: Array<String>) {
 //    e.shutdown()
 
     //3_b callables
-    val executor = Executors.newFixedThreadPool(5)
+//    val executor = Executors.newFixedThreadPool(5)
+//    val corredor = Callable<String> {
+//        var metros = 0
+//        while (metros < 10) {
+//            metros += Random.nextInt(1, 10)
+//        }
+//        "Corredor terminó la carrera!"
+//    }
+//
+//
+//
+//
+//    val future: Future<String> = executor.submit(corredor)
+//
+//    try {
+//        val resultado = future.get()
+//        println(resultado)
+//    } catch (e: ExecutionException) {
+//        println("Ocurrió un problema: ${e.cause?.message}")
+//    } catch (e: InterruptedException) {
+//        println("Ejecución interrumpida.")
+//    } finally {
+//        executor.shutdown()
+//    }
 
-    val corredor = Callable<String> {
-        var metros = 0
-        while (metros < 10) {
-            metros += Random.nextInt(1, 10)
-        }
-        "Corredor terminó la carrera!"
+
+    //3_b callables más de un corredor
+    val executor = Executors.newFixedThreadPool(5)
+    val listaCorredores = listOf(
+        "12", "23", "34", "45", "56",
+        "67", "78", "89", "90", "11",
+        "22", "33", "44", "55", "66",
+        "77", "88", "99", "100", "101",
+        "102", "103", "104", "105", "106",
+        "107", "108", "109", "110", "111"
+    )
+
+    val futuros: List<Future<String>> = listaCorredores.map{
+        id -> executor.submit(Callable<String>{
+            var metros = 0
+            while (metros < 10) {
+                metros += Random.nextInt(1, 10)
+            }
+            "Corredor $id terminó la carrera!"
+        })
     }
 
-    val future: Future<String> = executor.submit(corredor)
-
     try {
-        val resultado = future.get()
-        println(resultado)
+        for (futuro in futuros) {
+            println(futuro.get())
+        }
     } catch (e: ExecutionException) {
         println("Ocurrió un problema: ${e.cause?.message}")
     } catch (e: InterruptedException) {
