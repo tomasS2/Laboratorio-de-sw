@@ -1,0 +1,3 @@
+https://github.com/onofricamila/LaboratorioDeSoftware/tree/master/examenes/2
+
+otro: https://github.com/JuanCruzCB/Laboratorio-de-Software/tree/main/Parciales/2/src/main
