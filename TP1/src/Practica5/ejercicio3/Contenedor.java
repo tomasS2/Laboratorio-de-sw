@@ -17,6 +17,9 @@ public class Contenedor {
 
         try{
             Class <?> testClass = instancia.getClass();
+            if (!testClass.isAnnotationPresent(Servidor.class)) {
+                throw new ClassNotFoundException("La clase no tiene la anotación @Servidor");
+            }
             Servidor configServidor = testClass.getAnnotation(Servidor.class);
             ServerSocket serverSocket = new ServerSocket(parseInt(configServidor.puerto()));
             while (true){
