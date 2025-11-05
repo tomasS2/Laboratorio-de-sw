@@ -10,8 +10,6 @@ import kotlin.random.Random
 fun main(args: Array<String>) {
 
 
-
-
     //3
 //    for(i in 1 .. 5) {
 //        thread() {
@@ -37,7 +35,6 @@ fun main(args: Array<String>) {
 //        }
 //    }
 //    e.shutdown();
-
 
 
     //3 con clase corredor
@@ -115,26 +112,45 @@ fun main(args: Array<String>) {
         "107", "108", "109", "110", "111"
     )
 
-    val futuros: List<Future<String>> = listaCorredores.map{
-        id -> executor.submit(Callable<String>{
+//    val futuros: List<Future<String>> = listaCorredores.map{
+//        id -> executor.submit(Callable<String>{
+//            var metros = 0
+//            while (metros < 10) {
+//                metros += Random.nextInt(1, 10)
+//            }
+//            "Corredor $id terminó la carrera!"
+//        })
+//    }
+//
+//    try {
+//        for (futuro in futuros) {
+//            println(futuro.get())
+//        }
+//    } catch (e: ExecutionException) {
+//        println("Ocurrió un problema: ${e.cause?.message}")
+//    } catch (e: InterruptedException) {
+//        println("Ejecución interrumpida.")
+//    } finally {
+//        executor.shutdown()
+//    }
+
+    //otra forma
+    val tareas = listaCorredores.map { id ->
+        Callable<String> {
             var metros = 0
             while (metros < 10) {
                 metros += Random.nextInt(1, 10)
             }
             "Corredor $id terminó la carrera!"
-        })
-    }
-
-    try {
-        for (futuro in futuros) {
-            println(futuro.get())
         }
-    } catch (e: ExecutionException) {
-        println("Ocurrió un problema: ${e.cause?.message}")
-    } catch (e: InterruptedException) {
-        println("Ejecución interrumpida.")
-    } finally {
-        executor.shutdown()
     }
-
+    val futures = executor.invokeAll(tareas);
+    for (future in futures) {
+        try {
+            println(future.get())
+        } catch (e: Exception) {
+            println("Error: ${e.message}")
+        }
+    }
+    executor.shutdown()
 }
